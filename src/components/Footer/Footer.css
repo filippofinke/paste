@@ -1,0 +1,16 @@
+.footer {
+	position: absolute;
+	bottom: 5px;
+	width: 100%;
+	color: var(--text-color);
+	display: flex;
+	align-items: center;
+	font-size: 0.9em;
+}
+
+.footer svg {
+	max-width: 25px;
+	max-height: 25px;
+	margin-left: 5px;
+	margin-right: 5px;
+}

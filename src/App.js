@@ -1,10 +1,11 @@
 import "react-quill/dist/quill.snow.css";
 import "./App.css";
 import { useEffect, useState } from "react";
-import aes256 from "aes256";
 import generator from "generate-password";
 import PasteService from "./services/PasteService";
 import Editor from "./components/Editor/Editor";
+import Footer from "./components/Footer/Footer";
+import Aes256GCM from "./utils/Aes256GCM";
 
 const App = () => {
 	const [id, setId] = useState("");
@@ -23,7 +24,7 @@ const App = () => {
 		}
 
 		setText(text);
-		let encrypted = text ? aes256.encrypt(password, text) : "";
+		let encrypted = text ? Aes256GCM.encrypt(text, password) : "";
 		PasteService.update(masterPassword, id, encrypted);
 	};
 
@@ -56,7 +57,11 @@ const App = () => {
 				if (response.status === 200) {
 					response.json().then((json) => {
 						if (json.text) {
-							setText(aes256.decrypt(pass, json.text));
+							try {
+								setText(Aes256GCM.decrypt(json.text, pass));
+							} catch (e) {
+								setText("Invalid password!");
+							}
 						}
 					});
 				} else {
@@ -92,6 +97,7 @@ const App = () => {
 					</a>
 				</div>
 			)}
+			<Footer></Footer>
 		</div>
 	);
 };
