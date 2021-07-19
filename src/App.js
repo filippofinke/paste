@@ -13,6 +13,8 @@ const App = () => {
 	const [password, setPassword] = useState("");
 	const [text, setText] = useState("");
 	const [readOnly, setReadOnly] = useState(false);
+	const [saving, setSaving] = useState(false);
+	const [updateTimeout, setUpdateTimeout] = useState(null);
 
 	const handleTextChange = (text) => {
 		if (!id) {
@@ -24,8 +26,17 @@ const App = () => {
 		}
 
 		setText(text);
-		let encrypted = text ? Aes256GCM.encrypt(text, password) : "";
-		PasteService.update(masterPassword, id, encrypted);
+
+		clearTimeout(updateTimeout);
+		setUpdateTimeout(
+			setTimeout(() => {
+				setSaving(true);
+				let encrypted = text ? Aes256GCM.encrypt(text, password) : "";
+				PasteService.update(masterPassword, id, encrypted).then(() => {
+					setSaving(false);
+				});
+			}, 500)
+		);
 	};
 
 	const copyLinkToClipboard = (event) => {
@@ -97,7 +108,7 @@ const App = () => {
 					</a>
 				</div>
 			)}
-			<Footer></Footer>
+			<Footer saving={saving}></Footer>
 		</div>
 	);
 };
