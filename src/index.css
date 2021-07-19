@@ -1,4 +1,16 @@
-html, body, #root {
+:root {
+	--toolbar-color: #cdd9e5;
+	--toolbar-hover-color: #539bf5;
+	--toolbar-background-color: #2d333b;
+	--toolbar-options-background-color: #2d333b;
+	--background-color: #1e2329;
+	--text-color: #adbac7;
+}
+
+
+html,
+body,
+#root {
   height: 100%;
 }
 

@@ -1,24 +1,9 @@
-:root {
-	--toolbar-color: #cdd9e5;
-	--toolbar-hover-color: #539bf5;
-	--toolbar-background-color: #2d333b;
-	--toolbar-options-background-color: #2d333b;
-	--background-color: #1e2329;
-	--text-color: #adbac7;
-}
-
 .app {
 	height: 100%;
 	width: 100%;
 	overflow: hidden;
 	background-color: var(--background-color);
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-}
-
-.editor {
-	width: 100%;
-	height: 100%;
-	color: var(--text-color);
 }
 
 .link {
@@ -28,7 +13,7 @@
 	text-align: center;
 }
 
-.link button {
+.link .button {
 	font-size: 0.8em;
 	background-color: #22272e;
 	border: 1px solid #444c56;
@@ -36,70 +21,11 @@
 	color: var(--text-color);
 	padding: 10px 20px;
 	cursor: pointer;
-}
-
-.Toastify__toast--default {
-	background-color: #22272e;
-	color: var(--text-color);
+	margin: 0;
+	text-decoration: none;
 }
 
 .link button:hover {
 	background-color: #444c56;
 	border-color: #768390;
-}
-
-.ql-container.ql-snow,
-.ql-toolbar.ql-snow,
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-label,
-.ql-toolbar.ql-snow .ql-picker.ql-expanded .ql-picker-options {
-	border: none;
-}
-
-.ql-toolbar {
-	background-color: var(--toolbar-background-color);
-	text-align: center;
-}
-
-.ql-toolbar.ql-snow {
-	padding: 15px;
-}
-
-.ql-snow .ql-picker-options,
-.ql-picker-options {
-	background-color: var(--toolbar-options-background-color);
-}
-
-.ql-snow .ql-picker.ql-expanded .ql-picker-label,
-.ql-snow .ql-picker {
-	color: var(--toolbar-color);
-}
-
-.ql-snow .ql-fill,
-.ql-snow .ql-stroke.ql-fill {
-	fill: var(--toolbar-color);
-}
-
-.ql-snow .ql-stroke {
-	stroke: var(--toolbar-color);
-}
-
-.ql-snow.ql-toolbar button:hover,
-.ql-snow .ql-toolbar button:hover,
-.ql-snow.ql-toolbar button:focus,
-.ql-snow .ql-toolbar button:focus,
-.ql-snow.ql-toolbar button.ql-active,
-.ql-snow .ql-toolbar button.ql-active,
-.ql-snow.ql-toolbar .ql-picker-label:hover,
-.ql-snow .ql-toolbar .ql-picker-label:hover,
-.ql-snow.ql-toolbar .ql-picker-label.ql-active,
-.ql-snow .ql-toolbar .ql-picker-label.ql-active,
-.ql-snow.ql-toolbar .ql-picker-item:hover,
-.ql-snow .ql-toolbar .ql-picker-item:hover,
-.ql-snow.ql-toolbar .ql-picker-item.ql-selected,
-.ql-snow .ql-toolbar .ql-picker-item.ql-selected {
-	color: var(--toolbar-hover-color);
-}
-
-.ql-disabled {
-	cursor: not-allowed;
 }

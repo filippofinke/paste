@@ -31,9 +31,9 @@ npm run start-server
 
 👤 **Filippo Finke**
 
-* Website: https://filippofinke.ch
-* Github: [@filippofinke](https://github.com/filippofinke)
-* LinkedIn: [@filippofinke](https://linkedin.com/in/filippofinke)
+- Website: https://filippofinke.ch
+- Github: [@filippofinke](https://github.com/filippofinke)
+- LinkedIn: [@filippofinke](https://linkedin.com/in/filippofinke)
 
 ## Show your support
 
