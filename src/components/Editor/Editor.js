@@ -23,7 +23,7 @@ const Editor = (props) => {
 		<ReactQuill
 			className="editor"
 			theme="snow"
-			modules={{ toolbar: props.readOnly ? false : modules }}
+			modules={{ syntax: true, toolbar: props.readOnly ? false : modules }}
 			value={props.value}
 			onChange={props.onChange}
 			readOnly={props.readOnly}
