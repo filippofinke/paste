@@ -24,7 +24,7 @@ npm run build
 ## Start the server
 
 ```sh
-npm run start-server
+npm run start
 ```
 
 ## Author
