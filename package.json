@@ -16,8 +16,8 @@
     "uuid": "^8.3.2"
   },
   "scripts": {
-    "start-server": "node server.js",
-    "start": "react-scripts start",
+    "start": "node server.js",
+    "start-ui": "react-scripts start",
     "build": "react-scripts build"
   },
   "eslintConfig": {
