@@ -8,7 +8,7 @@ import Footer from "./components/Footer/Footer";
 import Aes256GCM from "./utils/Aes256GCM";
 
 const App = () => {
-	const [id, setId] = useState("");
+	const [id, setId] = useState(null);
 	const [masterPassword, setMasterPassword] = useState("");
 	const [password, setPassword] = useState("");
 	const [text, setText] = useState("");
@@ -16,17 +16,8 @@ const App = () => {
 	const [saving, setSaving] = useState(false);
 	const [updateTimeout, setUpdateTimeout] = useState(null);
 
-	const handleTextChange = (text) => {
-		if (!id) {
-			PasteService.create(masterPassword)
-				.then((response) => response.json())
-				.then((json) => {
-					setId(json.id);
-				});
-		}
-
-		setText(text);
-
+	useEffect(() => {
+		if (!id) return;
 		clearTimeout(updateTimeout);
 		setUpdateTimeout(
 			setTimeout(() => {
@@ -36,7 +27,17 @@ const App = () => {
 					setSaving(false);
 				});
 			}, 500)
-		);
+		); // eslint-disable-next-line
+	}, [id, text]);
+
+	const handleTextChange = async (text) => {
+		setText(text);
+
+		if (!id) {
+			let response = await PasteService.create(masterPassword);
+			let json = await response.json();
+			setId(json.id);
+		}
 	};
 
 	const copyLinkToClipboard = (event) => {
