@@ -2,7 +2,6 @@
 
 <p align="center">
   <img src="https://forthebadge.com/images/badges/contains-tasty-spaghetti-code.svg">
-  <h4 align="center">WARNING: Spaghetti code, this is under development.</h4>
 </p>
 
 > Client side encrypted text sharing where the server has zero knowledge of the data.
