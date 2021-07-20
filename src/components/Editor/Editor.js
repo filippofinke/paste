@@ -1,4 +1,5 @@
 import "./Editor.css";
+import React from "react";
 import ReactQuill from "react-quill";
 
 const Editor = (props) => {

@@ -1,6 +1,6 @@
 import "react-quill/dist/quill.snow.css";
 import "./App.css";
-import { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react";
 import generator from "generate-password";
 import PasteService from "./services/PasteService";
 import Editor from "./components/Editor/Editor";

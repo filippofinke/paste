@@ -17,8 +17,8 @@
   },
   "scripts": {
     "start": "node server.js",
-    "start-ui": "react-scripts start",
-    "build": "react-scripts build"
+    "start-ui": "craco start",
+    "build": "craco build"
   },
   "eslintConfig": {
     "extends": [
@@ -37,5 +37,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "@craco/craco": "^6.2.0",
+    "craco-esbuild": "^0.3.2"
   }
 }
