@@ -1,11 +1,15 @@
 .footer {
 	position: absolute;
-	bottom: 5px;
+	bottom: 0;
 	width: 100%;
 	color: var(--text-color);
 	display: flex;
 	align-items: center;
 	font-size: 0.9em;
+	max-height: 45px;
+	padding: 10px;
+	box-sizing: border-box;
+	background-color: var(--background-color);
 }
 
 .footer svg {

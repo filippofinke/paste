@@ -1,19 +1,27 @@
 .app {
 	height: 100%;
 	width: 100%;
-	overflow: hidden;
+	overflow-y: scroll;
 	background-color: var(--background-color);
 	font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+	-ms-overflow-style: none; /* IE and Edge */
+	scrollbar-width: none;
+}
+
+.app::-webkit-scrollbar {
+	display: none;
 }
 
 .link {
 	position: absolute;
-	bottom: 50px;
+	bottom: 4px;
 	width: 100%;
 	text-align: center;
+	z-index: 3;
 }
 
 .link .button {
+	display: inline-block;
 	font-size: 0.8em;
 	background-color: #22272e;
 	border: 1px solid #444c56;
