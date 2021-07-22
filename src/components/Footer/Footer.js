@@ -37,7 +37,7 @@ const Footer = (props) => {
 			<span>
 				{props.saving
 					? "Saving..."
-					: "Every paste is encrypted and decrypted client-side using AES-256-GCM"}
+					: "Every paste is encrypted client-side using AES-256-GCM"}
 			</span>
 		</div>
 	);
