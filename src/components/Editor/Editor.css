@@ -18,6 +18,9 @@
 
 .ql-toolbar.ql-snow {
 	padding: 15px;
+	position: sticky;
+	top: 0;
+	z-index: 2;
 }
 
 .ql-snow .ql-picker-options,
