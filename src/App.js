@@ -1,11 +1,13 @@
 import "react-quill/dist/quill.snow.css";
 import "./App.css";
+
 import React, { useEffect, useState } from "react";
 import generator from "generate-password";
 import PasteService from "./services/PasteService";
 import Editor from "./components/Editor/Editor";
 import Footer from "./components/Footer/Footer";
 import Aes256GCM from "./utils/Aes256GCM";
+import htmlToFormattedText from "html-to-formatted-text";
 
 const App = () => {
 	const [id, setId] = useState(null);
@@ -107,6 +109,14 @@ const App = () => {
 					<a className="button" href="/">
 						Create an encrypted paste
 					</a>
+					<button
+						className="button"
+						onClick={() => {
+							document.body.innerText = htmlToFormattedText(text);
+						}}
+					>
+						Raw
+					</button>
 				</div>
 			)}
 			<Footer saving={saving}></Footer>
