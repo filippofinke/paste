@@ -34,6 +34,11 @@ npm run start
 - Github: [@filippofinke](https://github.com/filippofinke)
 - LinkedIn: [@filippofinke](https://linkedin.com/in/filippofinke)
 
+## Todo
+- [ ] Custom password
+  - [ ] Ask password on view
+  - [ ] Ask password on create
+
 ## Show your support
 
 Give a ⭐️ if this project helped you!
