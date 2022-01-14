@@ -6,7 +6,12 @@
 
 > Client side encrypted text sharing where the server has zero knowledge of the data.
 
-### ✨ [Demo](https://paste.filippofinke.ch)
+<details>
+ <summary>Demo</summary>
+ <p align="center">
+  <img src="https://user-images.githubusercontent.com/37296364/149512712-1c30a0c6-58e8-4249-a693-3baecc3b94ad.gif">
+</p>
+</details>
 
 ## Install
 
